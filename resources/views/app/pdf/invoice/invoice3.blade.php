@@ -38,7 +38,7 @@
         .header-logo {
 
             text-transform: capitalize;
-            color: #817AE3;
+            color: #012970;
             padding-top: 0px;
         }
 
@@ -104,7 +104,7 @@
             line-height: 15px;
             color: #595959;
             margin-top: 5px;
-            width: 160px;
+            width: 320px;
             word-wrap: break-word;
         }
 
@@ -320,7 +320,7 @@
                     @if ($logo)
                         <img class="header-logo" style="height: 50px;" src="{{ $logo }}" alt="Company Logo">
                     @else
-                        <h1 class="header-logo"> {{ $invoice->customer->company->name }} </h1>
+                        <h2 class="header-logo"> {{ $invoice->customer->company->name }} </h2>
                     @endif
                 </td>
                 <td width="50%" class="text-right company-address-container company-address">
@@ -341,14 +341,6 @@
                         {!! $billing_address !!}
                     @endif
                 </div>
-
-                <div @if ($billing_address !== '</br>') class="shipping-address-container shipping-address" @else class="shipping-address-container--left shipping-address" @endif>
-                    @if ($shipping_address)
-                        <b>@lang('pdf_ship_to')</b> <br>
-                        {!! $shipping_address !!}
-                    @endif
-                </div>
-                <div style="clear: both;"></div>
             </div>
 
             <div class="invoice-details-container">
