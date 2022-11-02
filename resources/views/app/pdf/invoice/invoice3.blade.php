@@ -366,10 +366,6 @@
 
         <div class="notes">
             @if ($notes)
-                <div class="notes-label">
-                    @lang('pdf_notes')
-                </div>
-
                 {!! $notes !!}
             @endif
         </div>
